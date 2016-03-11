@@ -207,7 +207,7 @@ class CqlProtocol
 	{
 		$len = $this->generateShort(strlen($string));
 		$stringBin = $this->_convertAsciiToBinary($string);
-		$this->byteCount += strlen($stringBin);
+		$this->_byteCount += strlen($stringBin);
 		
 		return $len.$stringBin;
 	}
